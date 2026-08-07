@@ -5,8 +5,8 @@ import type { CapacitorConfig } from "@capacitor/cli";
  * التطبيق يعمل بتقنية SSR، لذلك يُحمّل الموقع المنشور داخل التطبيق الأصلي.
  */
 const config: CapacitorConfig = {
-  appId: "app.lovable.arabsparkai",
-  appName: "وَصْل",
+  appId: "com.wasl.pro",
+  appName: "وصل برو",
   webDir: "dist",
   server: {
     url: "https://arab-spark-ai.lovable.app",
