@@ -1,1 +1,7 @@
-export const consumeLastCapturedError = () => null;
+export function consumeLastCapturedError() {
+  return null;
+}
+export default {
+  consumeLastCapturedError,
+};
+
