@@ -15,10 +15,10 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 20
 
       - name: Install dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
       - name: Build web assets
         run: npm run build
@@ -31,11 +31,10 @@ jobs:
 
       - name: Initialize Android environment
         run: |
-          npx cap add android
+          npx cap add android || true
           npx cap sync android
 
       - name: Build Android Release Bundle (AAB)
         run: |
           cd android
           ./gradlew bundleRelease
-          
