@@ -23,14 +23,13 @@ jobs:
       - name: Build web assets
         run: |
           npm run build
-          # نتأكد من وجود مجلد dist ليتوافق مع إعدادات Capacitor
           if [ ! -d "dist" ]; then mkdir dist; fi
 
       - name: Set up Java
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: '17'
+          java-version: '21'
 
       - name: Initialize Android environment
         run: |
@@ -41,3 +40,4 @@ jobs:
         run: |
           cd android
           ./gradlew bundleRelease
+          
