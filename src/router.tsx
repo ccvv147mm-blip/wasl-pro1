@@ -1,7 +1,8 @@
 import { createRouter } from '@tanstack/react-router'
 
-export function createMyRouter() {
+export function getRouter() {
   return createRouter({
-    routeTree: {} as any, 
+    routeTree: {} as any,
   })
 }
+
